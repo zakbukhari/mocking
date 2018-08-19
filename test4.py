@@ -8,6 +8,6 @@ def mock_diff(a, b):
 class TestCalculator(TestCase):
     @patch('main.Calculator.sum', side_effect=mock_diff)
     def test_sum(self, summm):
-        self.assertEqual(summm(7,3), 4)
+        self.assertEqual(summm(7,3), 5)
         self.assertEqual(summm(9,3), 6)
 
